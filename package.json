@@ -18,7 +18,7 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "lodash": "^4.17.20",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.0",
     "nuxt-purgecss": "^1.0.0",
     "prettier": "2.1.2",
     "push-dir": "^0.4.1",
