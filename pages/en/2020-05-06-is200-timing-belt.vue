@@ -50,8 +50,8 @@
       </li>
       <li>
         A torque wrench, going from 17.5 Nm to 220 Nm (I bought a digital torque
-        adapter, but I wouldn't necessarily not recommand it. I'll talk about it
-        in the article)
+        adapter, but I wouldn't necessarily recommand it. I'll talk about it in
+        the article)
       </li>
       <li>A hammer and some wooden blocks (to soften the impact)</li>
       <li>Protections for your hands and eyes (recommanded)</li>
