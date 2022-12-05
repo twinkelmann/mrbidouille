@@ -75,7 +75,7 @@
 
       <p class="my-2">
         For my own protection, I have to say that whatever information you find
-        on this site is given without guaranty. I am not a professional, and as
+        on this site is given without warranty. I am not a professional, and as
         such, nothing I say/write should be taken as truth or advice.<br />
         Always stay safe when working on cars and with electronics, and when in
         doubt, ask a professional.<br />
