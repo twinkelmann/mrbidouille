@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1727866318",layout:"default",error:a,serverRendered:true,routePath:"\u002Ffr\u002F2020-05-01-is200-manuel-de-service",config:{_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:a}}}}(null));
