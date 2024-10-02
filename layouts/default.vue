@@ -60,25 +60,6 @@ export default {
       return this.$route.name === 'index'
     },
   },
-  beforeMount() {
-    // hyvor config
-    window.HYVOR_TALK_WEBSITE = 408
-
-    // hyvor comment count reciever
-    window.hyvorComments = {
-      asked: [],
-      recieved: {},
-    }
-
-    window.hyvorTalkCommentCount = {
-      receiveData: (data) => {
-        window.hyvorComments.recieved = {
-          ...window.hyvorComments.recieved,
-          ...data,
-        }
-      },
-    }
-  },
   mounted() {
     // look for scrolling
     // The debounce function receives our function as a parameter

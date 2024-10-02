@@ -44,6 +44,11 @@ export default {
         href: '/site.webmanifest',
       },
     ],
+    script: [
+      {
+        src: 'https://talk.hyvor.com/embed/comment-counts.js',
+      },
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -74,6 +79,7 @@ export default {
       'page-leave-active',
       'page-leave-to',
       'page-enter',
+      'back-to-top',
     ],
     whitelistPatternsChildren: [/marked$/],
   },
@@ -84,8 +90,10 @@ export default {
   build: {
     extractCSS: true,
     postcss: {
-      plugins: {
-        tailwindcss: './tailwind.config.js',
+      postcssOptions: {
+        plugins: {
+          tailwindcss: './tailwind.config.js',
+        },
       },
     },
     /*

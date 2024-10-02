@@ -1,5 +1,5 @@
 <template>
-  <main class="flex-grow text-gray-100" ref="main">
+  <main class="flex-grow text-gray-100">
     <article>
       <section>
         <div
@@ -30,11 +30,22 @@
       >
         <slot />
         <!-- comments -->
-        <div id="hyvor-talk-view">
+        <noscript>
           <div class="w-full italic text-center my-8">
             Reading and writing comments requires JavaScript
           </div>
-        </div>
+        </noscript>
+        <script
+          async
+          src="https://talk.hyvor.com/embed/embed.js"
+          type="module"
+        ></script>
+        <hyvor-talk-comments
+          :website-id="HYVOR_TALK_WEBSITE"
+          :page-id="hyvorId"
+          :page-url="'https://mrbidouille.ch' + this.link"
+          loading="lazy"
+        ></hyvor-talk-comments>
       </section>
     </article>
     <!-- back to top -->
@@ -88,21 +99,12 @@ export default {
     link: String,
     hyvorId: Number,
   },
-  beforeMount() {
-    // write or overwrite the global config
-    window.HYVOR_TALK_CONFIG = {
-      url: 'https://mrbidouille.ch' + this.link,
-      id: this.hyvorId,
-    }
-  },
-  mounted() {
-    const script = document.createElement('script')
-    script.src = 'https://talk.hyvor.com/web-api/embed'
-    this.$refs.main.appendChild(script)
-  },
   computed: {
     random() {
       return ministore.MATOMO_SEED
+    },
+    HYVOR_TALK_WEBSITE() {
+      return ministore.HYVOR_TALK_WEBSITE
     },
   },
 }

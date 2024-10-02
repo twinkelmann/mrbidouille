@@ -172,6 +172,11 @@ export default {
       langFilter: 'english',
     }
   },
+  mounted() {
+    hyvorTalkCommentCounts.load({
+      'website-id': ministore.HYVOR_TALK_WEBSITE,
+    })
+  },
   computed: {
     noResults() {
       return (

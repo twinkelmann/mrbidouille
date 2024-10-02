@@ -13,7 +13,11 @@
             :key="i"
           ></li>
         </ul>
-        <span class="text-right">{{ comments }}</span>
+        <span class="text-right"
+          ><hyvor-talk-comment-count :page-id="hyvorId"
+            >... comments</hyvor-talk-comment-count
+          ></span
+        >
       </div>
       <div
         class="bg-cover bg-center w-full h-50 my-2 rounded-md"
@@ -37,35 +41,6 @@ export default {
     summary: String,
     link: String,
     hyvorId: Number,
-  },
-  data() {
-    return {
-      comments: '... comments',
-    }
-  },
-  mounted() {
-    // someone already asked this comments number
-    if (!window.hyvorComments.asked.includes(this.hyvorId)) {
-      window.hyvorComments.asked.push(this.hyvorId)
-
-      const script = document.createElement('script')
-      script.src = encodeURI(
-        `https://talk.hyvor.com/web-api/count/get?website=${HYVOR_TALK_WEBSITE}&webpageIdentifiers=[${
-          this.hyvorId
-        }]&time=${new Date().getTime()}`
-      )
-      document.body.appendChild(script)
-    }
-
-    const tryToFindComments = () => {
-      if (!window.hyvorComments.recieved.hasOwnProperty(this.hyvorId)) {
-        return setTimeout(tryToFindComments, 300)
-      }
-
-      this.comments = window.hyvorComments.recieved[this.hyvorId].string
-    }
-
-    tryToFindComments()
   },
 }
 </script>

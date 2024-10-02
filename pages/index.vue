@@ -77,6 +77,11 @@ export default {
     }
   },
   components: { ArticlePreview },
+  mounted() {
+    hyvorTalkCommentCounts.load({
+      'website-id': ministore.HYVOR_TALK_WEBSITE,
+    })
+  },
   computed: {
     latestArticles() {
       return newestFirst(articles.list.en.concat(articles.list.fr)).slice(0, 6)
