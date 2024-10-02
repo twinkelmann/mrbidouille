@@ -79,7 +79,7 @@ export default {
       'page-leave-active',
       'page-leave-to',
       'page-enter',
-      'back-to-top',
+      "html[data-scroll='0'] .back-to-top",
     ],
     whitelistPatternsChildren: [/marked$/],
   },

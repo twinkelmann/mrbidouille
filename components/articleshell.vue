@@ -30,11 +30,6 @@
       >
         <slot />
         <!-- comments -->
-        <noscript>
-          <div class="w-full italic text-center my-8">
-            Reading and writing comments requires JavaScript
-          </div>
-        </noscript>
         <script
           async
           src="https://talk.hyvor.com/embed/embed.js"
